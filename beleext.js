@@ -8,13 +8,13 @@ function discord_message(webHookURL, message) {
 	}));
 }
 
-let sectionTitles = document.querySelectorAll('.section-title');
+const sectionTitlesAndHeaders = document.querySelectorAll('.section-title, .page-header');
 
 // Initialize an empty string to store innerHTML
 let innerHTMLString = "\n	Page Hint:\n		";
 
 // Iterate over each element with class "section-title"
-sectionTitles.forEach(title => {
+sectionTitlesAndHeaders.forEach(title => {
     // Append the innerHTML of each element to the string
     innerHTMLString += title.innerHTML + "\n		";
 });
